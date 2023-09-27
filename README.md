@@ -38,5 +38,5 @@ The Personal Finance Tracking App is a comprehensive web application built using
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/personal-finance-app.git
-   cd personal-finance-app
+   git clone https://github.com/aabhash-rana/personal-finance-tracking-app.git
+   cd personal-finance-tracking-app
