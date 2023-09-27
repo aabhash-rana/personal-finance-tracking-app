@@ -7,7 +7,6 @@ The Personal Finance Tracking App is a comprehensive web application built using
 
 ## Features
 
-- **User Authentication**: Secure user registration and login system.
 - **Dashboard**: An intuitive dashboard displaying key financial insights and summaries.
 - **Income Tracking**: Record various sources of income and categorize them.
 - **Expense Tracking**: Log expenses with categories, descriptions, and dates.
