@@ -7,23 +7,21 @@ The Personal Finance Tracking App is a comprehensive web application built using
 
 ## Features
 
-- **Dashboard**: An intuitive dashboard displaying key financial insights and summaries.
-- **Income Tracking**: Record various sources of income and categorize them.
-- **Expense Tracking**: Log expenses with categories, descriptions, and dates.
-- **Budget Management**: Set monthly budgets for different spending categories.
-- **Transaction History**: Detailed transaction history to review past financial activity.
-- **Financial Goals**: Set, track, and visualize your financial goals.
-- **Charts and Reports**: Visualize financial data with interactive charts and reports.
-- **Responsive Design**: Accessible and usable on various devices.
+- Dashboard: An intuitive dashboard displaying key financial insights and summaries.
+- Income Tracking: Record various sources of income and categorize them.
+- Expense Tracking: Log expenses with categories, descriptions, and dates.
+- Budget Management: Set monthly budgets for different spending categories.
+- Transaction History: Detailed transaction history to review past financial activity.
+- Financial Goals: Set, track, and visualize your financial goals.
+- Charts and Reports: Visualize financial data with interactive charts and reports.
+- Responsive Design: Accessible and usable on various devices.
 
 ## Technologies Used
 
-- **Frontend**: React, Redux (for state management), Material-UI (for UI components)
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB (with Mongoose)
-- **Authentication**: JWT (JSON Web Tokens)
-- **Charting**: Chart.js
-- **Deployment**: Heroku (backend), Netlify (frontend)
+- Frontend: React, Redux (for state management), Material-UI (for UI components)
+- Backend: Node.js, Express.js
+- Database: MongoDB (with Mongoose)
+
 
 ## Getting Started
 
