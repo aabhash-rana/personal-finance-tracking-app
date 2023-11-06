@@ -16,7 +16,7 @@ function Dashboard() {
     return (
         <DashboardStyled>
             <InnerLayout>
-                <h1>All Transactions</h1>
+            <h1>All Transactions</h1>
                 <div className="stats-con">
                     <div className="chart-con">
                         <Chart />
@@ -33,10 +33,14 @@ function Dashboard() {
                                     {dollar} {totalExpenses()}
                                 </p>
                             </div>
-                            
+                            <div className="balance">
+                                <h2>Total Balance</h2>
+                                <p>
+                                    {dollar} {totalBalance()}
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    
                 </div>
             </InnerLayout>
         </DashboardStyled>
