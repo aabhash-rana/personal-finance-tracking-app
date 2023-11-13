@@ -110,12 +110,12 @@ const ExpenseFormStyled = styled.form`
         padding: .5rem 1rem;
         border-radius: 5px;
         border: 2px solid #fff;
-        background: transparent;
+        background: white;
         resize: none;
         box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
-        color: rgba(34, 34, 96, 0.9);
+        color: rgba(0, 24, 96, 1);
         &::placeholder{
-            color: rgba(34, 34, 96, 0.4);
+            color: rgba(0, 24, 96, 1);
         }
     }
     .input-control{

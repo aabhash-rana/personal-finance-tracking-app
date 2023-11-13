@@ -44,7 +44,7 @@ function Form() {
                     type="text" 
                     value={title}
                     name={'title'} 
-                    placeholder="Salary Title"
+                    placeholder="Income Title"
                     onChange={handleInput('title')}
                 />
             </div>
@@ -52,7 +52,7 @@ function Form() {
                 <input value={amount}  
                     type="text" 
                     name={'amount'} 
-                    placeholder={'Salary Amount'}
+                    placeholder={'Income Amount'}
                     onChange={handleInput('amount')} 
                 />
             </div>
@@ -105,17 +105,18 @@ const FormStyled = styled.form`
     input, textarea, select{
         font-family: inherit;
         font-size: inherit;
+        font-color: black;
         outline: none;
         border: none;
         padding: .5rem 1rem;
         border-radius: 5px;
         border: 2px solid #fff;
-        background: transparent;
+        background: white;
         resize: none;
         box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
-        color: rgba(34, 34, 96, 0.9);
+        color: rgba(0, 24, 96, 1);
         &::placeholder{
-            color: rgba(34, 34, 96, 0.4);
+            color: rgba(0, 24, 96, 1);
         }
     }
     .input-control{
@@ -128,7 +129,7 @@ const FormStyled = styled.form`
         display: flex;
         justify-content: flex-end;
         select{
-            color: rgba(34, 34, 96, 0.4);
+            color: rgba(4, 34, 96, 0.4);
             &:focus, &:active{
                 color: rgba(34, 34, 96, 1);
             }

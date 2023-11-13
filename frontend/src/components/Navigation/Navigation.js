@@ -3,16 +3,21 @@ import styled from 'styled-components'
 import avatar from '../../img/avatar.png'
 import { signout } from '../../utils/Icons'
 import { menuItems } from '../../utils/menuItems'
+import { useGlobalContext } from '../../context/globalContext';
+import { dollar } from '../../utils/Icons';
+
 
 function Navigation({active, setActive}) {
-    
+const { totalBalance, totalExpenses, totalIncome } = useGlobalContext()
+const isIncomeGreaterThanExpense = totalIncome() > totalExpenses();
+ 
     return (
-        <NavStyled>
+        <NavStyled isIncomeGreaterThanExpense={isIncomeGreaterThanExpense}>
             <div className="user-con">
                 <img src={avatar} alt="" />
                 <div className="text">
                     <h2>Aabhash</h2>
-                    <p>Your Money</p>
+                    <p>{dollar} {totalBalance()} </p>
                 </div>
             </div>
             <ul className="menu-items">
@@ -61,14 +66,17 @@ const NavStyled = styled.nav`
             object-fit: cover;
             background: #fcf6f9;
             border: 2px solid #FFFFFF;
-            padding: .2rem;
+            padding: .rem;
             box-shadow: 0px 1px 17px rgba(0, 0, 0, 0.06);
         }
         h2{
             color: rgba(34, 34, 96, 1);
+            font-size: 2rem;
+            font-weight: 700;
         }
         p{
-            color: rgba(34, 34, 96, .6);
+            color: ${props => props.isIncomeGreaterThanExpense ?  'var(--color-green)' :'red' };
+            font-size: 2rem;
         }
     }
 
@@ -81,7 +89,7 @@ const NavStyled = styled.nav`
             grid-template-columns: 40px auto;
             align-items: center;
             margin: .6rem 0;
-            font-weight: 500;
+            font-weight: 600;
             cursor: pointer;
             transition: all .4s ease-in-out;
             color: rgba(34, 34, 96, .6);

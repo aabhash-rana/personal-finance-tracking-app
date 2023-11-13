@@ -12,11 +12,12 @@ function Dashboard() {
         getIncomes()
         getExpenses()
     }, [])
+    const isIncomeGreaterThanExpense = totalIncome() > totalExpenses();
 
     return (
-        <DashboardStyled>
+        <DashboardStyled isIncomeGreaterThanExpense={isIncomeGreaterThanExpense}>
             <InnerLayout>
-            <h1>All Transactions</h1>
+            <h1>Your Balance Health</h1>
                 <div className="stats-con">
                     <div className="chart-con">
                         <Chart />
@@ -53,8 +54,8 @@ const DashboardStyled = styled.div`
         grid-template-columns: repeat(5, 1fr);
         gap: 2rem;
         .chart-con{
-            grid-column: 1 / 4;
-            height: 400px;
+            grid-column: 2 / 5 ;
+            height: 600px;
             .amount-con{
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
@@ -65,61 +66,42 @@ const DashboardStyled = styled.div`
                 }
                 .income, .expense, .balance{
                     background: #FCF6F9;
-                    border: 2px solid #FFFFFF;
+                    border: 1px solid #FFFFFF;
                     box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
                     border-radius: 20px;
                     padding: 1rem;
                     p{
-                        font-size: 3.5rem;
+                        font-size: 2rem;
                         font-weight: 700;
                     }
                 }
-
+                .income{  
+                    p{
+                        color: var(--color-green);
+                        
+                    }
+                }
+                .expense{  
+                    p{
+                        color: red;
+                        
+                    }
+                }
                 .balance{
                     grid-column: 2 / 4;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+
                     p{
-                        color: var(--color-green);
-                        opacity: 0.6;
-                        font-size: 4.5rem;
+                        color: ${props => props.isIncomeGreaterThanExpense ?  'var(--color-green)' :'red' };
+                        font-size: 3rem;
                     }
                 }
             }
         }
-
-        .history-con{
-            grid-column: 4 / -1;
-            h2{
-                margin: 1rem 0;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
-            .salary-title{
-                font-size: 1.2rem;
-                span{
-                    font-size: 1.8rem;
-                }
-            }
-            .salary-item{
-                background: #FCF6F9;
-                border: 2px solid #FFFFFF;
-                box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
-                padding: 1rem;
-                border-radius: 20px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                p{
-                    font-weight: 600;
-                    font-size: 1.6rem;
-                }
-            }
-        }
-    }
+            
 `;
 
 export default Dashboard
