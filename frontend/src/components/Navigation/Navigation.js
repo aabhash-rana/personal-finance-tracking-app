@@ -88,8 +88,9 @@ const NavStyled = styled.nav`
             display: grid;
             grid-template-columns: 40px auto;
             align-items: center;
-            margin: .6rem 0;
+            margin: 1.8rem 0;
             font-weight: 600;
+            font-size: 1.4rem;
             cursor: pointer;
             transition: all .4s ease-in-out;
             color: rgba(34, 34, 96, .6);

@@ -55,7 +55,7 @@ const DashboardStyled = styled.div`
         gap: 2rem;
         .chart-con{
             grid-column: 2 / 5 ;
-            height: 600px;
+            height: 755px;
             .amount-con{
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);

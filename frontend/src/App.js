@@ -9,6 +9,7 @@ import Income from './components/Incomes/Income';
 import Expenses from './components/Expenses/Expenses';
 import History from './components/History/History';
 import { useGlobalContext } from './context/globalContext';
+import MinMax from './minmax/minmax';
 
 function App() {
   const [active, setActive] = useState(1)
@@ -25,9 +26,12 @@ function App() {
       case 2:
         return <History />
       case 3:
-        return <Income />
+        return <MinMax />
       case 4: 
+        return <Income />
+      case 5: 
         return <Expenses />
+
       default: 
         return <Dashboard />
     }
